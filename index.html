@@ -42,10 +42,13 @@
 <body>
 
     <!-- Vue -->
-    <div id="root">
-        <ul>
-            <li v-for="(email, i) in emails">{{email}}</li>
-        </ul>
+    <div id="root" class="container my-4">
+        <div v-if="emails.length >= 10">
+            <ul class="list-group">
+                <li v-for="(email, i) in emails" class="list-group-item">{{email}}</li>
+            </ul>
+        </div>
+        <div v-else>Loading...</div>
     </div>
 
 </body>
