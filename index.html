@@ -42,7 +42,11 @@
 <body>
 
     <!-- Vue -->
-    <div id="root"></div>
+    <div id="root">
+        <ul>
+            <li v-for="(email, i) in emails">{{email}}</li>
+        </ul>
+    </div>
 
 </body>
 
